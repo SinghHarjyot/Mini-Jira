@@ -1,17 +1,168 @@
+/* -----------------------------
+   🌐 Global Styles
+----------------------------- */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --bg-color: #f4f6f9;
+  --card-bg: #ffffff;
+  --text-color: #343a40;
+  --border-radius: 10px;
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s ease;
+  --font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
 body {
-  background-color: #f8f9fa;
-  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  font-family: var(--font-family);
+  color: var(--text-color);
 }
 
-h1, h2, h3 {
-  color: #2c3e50;
+/* -----------------------------
+   🧭 Header & Layout
+----------------------------- */
+h1, h2, h3, h4 {
+  font-weight: 600;
+  color: var(--text-color);
 }
 
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* -----------------------------
+   📦 Cards
+----------------------------- */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 25px;
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* -----------------------------
+   📊 Tables
+----------------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table thead {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: var(--border-radius);
+}
+
+table th, table td {
+  text-align: left;
+  padding: 12px 15px;
+  font-size: 15px;
+}
+
+table tbody tr {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  transition: var(--transition);
+}
+
+table tbody tr:hover {
+  background: #f8f9fc;
+}
+
+/* -----------------------------
+   🔘 Buttons
+----------------------------- */
+button, .btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+button:hover, .btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+button:active, .btn:active {
+  transform: scale(0.97);
+}
+
+/* Success button variant */
+.btn-success {
+  background-color: var(--success-color);
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+/* -----------------------------
+   🔐 Login / Register Cards
+----------------------------- */
 .login-container {
   max-width: 400px;
   margin: 100px auto;
-  padding: 30px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 40px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  border-radius: var(--border-radius);
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  transition: var(--transition);
+}
+
+.login-container input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+  outline: none;
+}
+
+/* -----------------------------
+   🧩 Bug Chart
+----------------------------- */
+canvas {
+  display: block;
+  margin: 0 auto;
+  max-width: 350px;
+}
+
+/* -----------------------------
+   🧱 Footer (Optional)
+----------------------------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--secondary-color);
+  font-size: 14px;
 }
