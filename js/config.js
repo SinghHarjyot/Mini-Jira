@@ -1,6 +1,11 @@
-const config = {
-  region: "ap-south-1",
-  userPoolId: "ap-south-1_jmGuJCkz", // from your User Pool
-  userPoolWebClientId: "1s0t8bjsb4vb7jot41s4iiGap", // from App client
+window._config = {
+  cognito: {
+    userPoolId: 'ap-south-1_jmGuJClkz',        // 👉 Your Cognito User Pool ID
+    userPoolClientId: '1s0t8bjbs4bvb7jot41s4iigap',       // 👉 Your App client ID (no secret)
+    region: 'ap-south-1'                       // 👉 Your AWS region
+  },
+  api: {
+    invokeUrl: 'https://your-api-id.execute-api.ap-south-1.amazonaws.com/prod' // 👉 API Gateway URL
+  }
 };
-export default config;
+ye wala try kar to
